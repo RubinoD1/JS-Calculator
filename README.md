@@ -1,6 +1,6 @@
 # JavaScript Calculator
 
-Github: 
+Github: https://github.com/RubinoD1/JS-Calculator
 
 Live Page: 
 

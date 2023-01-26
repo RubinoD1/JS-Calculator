@@ -13,6 +13,15 @@ const btnNine = document.querySelector('#button-nine');
 const btnZero = document.querySelector('#button-zero');
 
 const reset = document.querySelector('#reset');
+//Will delete last entry vs. reset which will delete all 
+const del = document.querySelector('#button-del');
+const equal = document.querySelector('#button-equal'); 
+const decimal = document.querySelector('#button-decimal');
+const plus = document.querySelector('#button-plus');
+const minus = document.querySelector('#button-minus');
+const divide = document.querySelector('#button-divide');
+const multiply = document.querySelector('#button-multiply');
+
 
 
 //Assign DOM pair to a its buttons value 

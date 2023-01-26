@@ -23,11 +23,20 @@ const divide = document.querySelector('#button-divide');
 const multiply = document.querySelector('#button-multiply');
 
 
+// MIGHT BE UNNEEDED, button press triggers the value to be added to equation/output
+//Assign DOM buttons their values
+//let one = 1;
+//console.log(one);
 
-//Assign DOM pair to a its buttons value 
+//EMPTY ARRAY- set functions to add assigned value to array
+let input = []; 
+//console.log(input);
 
 
-// Output is undefined 
+//Equation test - Working, print array out and it will automatically solve (cannot be a string)
+//let test = 1+2;
+//console.log(test);
+
 
 
 

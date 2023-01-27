@@ -40,7 +40,17 @@ let input = [];
 //console.log(test);
 
 
+//IF statement testeting - num combine, odd num interger even or equation wont work
+//MAKE second function to check even odd is proper input, or let user hang themselves and give error message at end. 
+/*
+var inputFilter = () {
+  if input.lastChild is NUM && input is NUM 
+  then combine, deletelastchild, and push new value 
+}
 
+
+
+*/
 
 
 //onClick event console.log button to test it is properly linked. 
@@ -51,7 +61,8 @@ btnOne.addEventListener('click', () => {
       //change to after value has been added to array and display the array's values on the front-end.
       //**Showing commas to seperate array items, need to figure out how to show as one string** 
       output.innerHTML = `<h1>${input}<h1>`;
-      
+      //trigger if statement below? 
+      //inputFilter(input.lastChild)???, or dont push until it goes through filter. FILTER FIRST, THEN OUPTPUT?
 }); 
 
 
@@ -61,13 +72,12 @@ reset.addEventListener('click', () => {
   //ADD- delete all from array
 }); 
 
-/* Delete function reference code - Delete all and Delete last
+//Delete function reference code - Delete all and Delete last- USE ARROW FUNCTION CHECK JS REPO
+del.addEventListener('click', () => {
+  //input.lastElementChild.remove();
+  //output.innerHTML = '<h1><h1>';  DISPLAY UPDATED EQUATION
+}); 
 
-// We can call methods such as remove ,this will remove .items (which is linked to ul above) from the HTML.  
-//ul.remove();
-// to remove the last item, instead of all 
-//ul.lastElementChild.remove();
-*/
 
 /* looping noters - for array 
 

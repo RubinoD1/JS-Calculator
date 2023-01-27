@@ -23,10 +23,12 @@ const divide = document.querySelector('#button-divide');
 const multiply = document.querySelector('#button-multiply');
 
 
-// MIGHT BE UNNEEDED, button press triggers the value to be added to equation/output
 //Assign DOM buttons their values
-//let one = 1;
-//console.log(one);
+btnOne.value = 1;
+//will need to convert the string for arithmetic
+plus.value = "+"; 
+//check type of value (is #?)
+//console.log(plus.value);
 
 //EMPTY ARRAY- set functions to add assigned value to array
 let input = []; 
@@ -40,16 +42,35 @@ let input = [];
 
 
 
+
 //onClick event console.log button to test it is properly linked. 
-btnTwo.addEventListener('click', () => {
-    //the default behavior is that we are submitting on click (which flashes click for a sec in the console.log). 
-    // To prevent the default behavior of the submit btn we take the event paramter and use preventDefault and call that method ()
-    //e.preventDefault();
-    output.innerHTML = '<h1>Click<h1>';
+btnOne.addEventListener('click', () => {
+  //add button's value to array - REMEMBER, MDM documentation can help 
+    input.push(`${btnOne.value}`); 
+    console.log(input);
+      //change to after value has been added to array and display the array's values on the front-end.
+      //**Showing commas to seperate array items, need to figure out how to show as one string** 
+      output.innerHTML = `<h1>${input}<h1>`;
+      
 }); 
 
 
 // RESET function 
 reset.addEventListener('click', () => {
   output.innerHTML = '<h1><h1>';
+  //ADD- delete all from array
 }); 
+
+/* Delete function reference code - Delete all and Delete last
+
+// We can call methods such as remove ,this will remove .items (which is linked to ul above) from the HTML.  
+//ul.remove();
+// to remove the last item, instead of all 
+//ul.lastElementChild.remove();
+*/
+
+/* looping noters - for array 
+
+// looping through and logging each item 
+items.forEach((item) => console.log(item));
+*/

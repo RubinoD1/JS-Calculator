@@ -68,13 +68,15 @@ btnOne.addEventListener('click', () => {
 
 // RESET function 
 reset.addEventListener('click', () => {
-  output.innerHTML = '<h1><h1>';
+  output.innerHTML = '<h1>All clear<h1>';
   //ADD- delete all from array
+
 }); 
 
 //Delete function reference code - Delete all and Delete last- USE ARROW FUNCTION CHECK JS REPO
 del.addEventListener('click', () => {
-  //input.lastElementChild.remove();
+  input.pop();
+  console.log(input);
   //output.innerHTML = '<h1><h1>';  DISPLAY UPDATED EQUATION
 }); 
 

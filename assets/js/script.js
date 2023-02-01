@@ -23,6 +23,10 @@ const divide = document.querySelector('#button-divide');
 const multiply = document.querySelector('#button-multiply');
 
 
+//sample decimal
+//decimal, even though this is a decimal, there is no float or data type in JavaScript; this is just a number. 
+//const rating = 4.5;
+
 //Assign DOM buttons their values
 btnOne.value = 1;
 //will need to convert the string for arithmetic
@@ -77,7 +81,8 @@ reset.addEventListener('click', () => {
 del.addEventListener('click', () => {
   input.pop();
   console.log(input);
-  //output.innerHTML = '<h1><h1>';  DISPLAY UPDATED EQUATION
+  // DISPLAY UPDATED EQUATION  
+  output.innerHTML = `<h1>${input}<h1>`; 
 }); 
 
 
@@ -85,4 +90,11 @@ del.addEventListener('click', () => {
 
 // looping through and logging each item 
 items.forEach((item) => console.log(item));
+*/
+
+/* console.log type of value
+
+// If we want to test these types, we can use console.log and typeof and the name of the variable, as shown below. 
+console.log(typeof age);
+
 */

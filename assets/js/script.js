@@ -72,14 +72,15 @@ btnOne.addEventListener('click', () => {
 
 // RESET function 
 reset.addEventListener('click', () => {
-  output.innerHTML = '<h1>All clear<h1>';
-  //ADD- delete all from array
-
+  // reset array to empty 
+  input = [];
+  console.log(input);
 }); 
 
 //Delete function reference code - Delete all and Delete last- USE ARROW FUNCTION CHECK JS REPO
 del.addEventListener('click', () => {
   input.pop();
+  //**comment out console.log once calculator is fully functional** 
   console.log(input);
   // DISPLAY UPDATED EQUATION  
   output.innerHTML = `<h1>${input}<h1>`; 

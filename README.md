@@ -4,6 +4,26 @@ Github: https://github.com/RubinoD1/JS-Calculator
 
 Live Page: 
 
+## Notes 
+
+- arithmatic cannot be don e on strings
+example A: 1 + 1 => 2   //numbers 
+example B: "1 + 1" => "1 + 1" //string
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Introduction
 
 
@@ -11,12 +31,13 @@ Live Page:
 ## Pseudocode 
 
 HTML 
-- create basic layout, then focus on JS. 
+- Once JS is complete, add some selectable themes. 
 
 CSS 
-- Possibly use Bootstrap again for practice. Or, hardcode CSS, but would need to manually adjust css for screen sizes.
+- 
 
 JS
+- make switch function to merge numbers to be more than single digit values
 - 
 
 

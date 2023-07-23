@@ -7,21 +7,20 @@ let num1 = undefined;//first number of the equation
 let num2 = undefined;//second number of the equation 
 let operator = undefined;//operator to set either +, - , *, or / --SEE README EXAMPLE
 
-//create check if click has type=button and then pass target into equation function 
+//checks for clicks in the document that have the class of btn and then passes it to the equation function if the class is present
 document.onclick = function(event) {
-  var target = event.target;
-  console.log(typeof target.innerHTML);
+ if(event.target.classList.contains('btn')){ // check for class="btn"
+    var target = event.target;
+    //console.log("true");
+    equation(target);
+  } else {
+    //console.log("False");
+  } 
 };
 
-document.onclick = function(event) {
-  //if event has type of button make target the value of event and pass into equation function
-  if(target)
-  var target = event.target;
-  console.log(typeof target.innerHTML);
-};
-
+//target is passed in and then values are sorted
 function equation(target) {
-  
+  //console.log("Passed to equation function!");
 }
 
 

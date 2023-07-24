@@ -10,20 +10,26 @@ let operator = undefined;//operator to set either +, - , *, or / --SEE README EX
 //checks for clicks in the document that have the class of btn and then passes it to the equation function if the class is present
 document.onclick = function(event) {
  if(event.target.classList.contains('btn')){ // check for class="btn"
-    var target = event.target;
-    //console.log("true");
+    var target = event.target.innerHTML; 
+    //console.log(target);
     equation(target);
-  } else {
+  } else { //ADD BASE CASE? or leave as is? 
     //console.log("False");
   } 
 };
 
 //target is passed in and then values are sorted
 function equation(target) {
-  //console.log("Passed to equation function!");
+  console.log(Number(target));
+  if (isNaN(target) === false){
+    console.log("A Number");
+  } else if (isNaN(target) === true){
+    console.log("is NaN");
+  }
+  
 }
 
-
+//console.log(isNaN("1"));
 
 /* NOTES
 //have numbers properly being added on to the end of the number vars

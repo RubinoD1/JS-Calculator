@@ -18,18 +18,52 @@ document.onclick = function(event) {
   } 
 };
 
-//target is passed in and then values are sorted
+/*target is passed in and then values are sorted
 function equation(target) {
-  console.log(Number(target));
+  //console.log(Number(target));
   if (isNaN(target) === false){
     console.log("A Number");
   } else if (isNaN(target) === true){
     console.log("is NaN");
   }
-  
+}
+*/
+
+function equation(target) {
+  //console.log(Number(target));
+  if (isNaN(target) === false && num1 === undefined){ //taget is a number and num1 is undefined
+    //console.log("A Number");
+    num1 = target;
+    console.log(num1);
+    return; //or got to display function || set display here for the HTML
+  } else if (isNaN(target) === false && num1 !== undefined && operator === undefined){//target is a number, num1 isn't undefined and operator is undefined
+    console.log("adding onto num1");
+    num1 = num1 + target;
+    console.log(num1);
+    return; //or got to display function || set display here for the HTML
+  } else if (isNaN(target) === true && num1 !== undefined && operator === undefined){//target isNaN, num1 is not undefined, and operator is undefined
+    console.log("is NaN");
+    operator = target;
+    console.log(operator);
+    return; //or got to display function || set display here for the HTML
+  } else if (isNaN(target) === false && operator !== undefined && num2 === undefined){ //target is a number, operator is not undefined, and num2 is undefined
+    num2 = target;
+    console.log(num2 + " is number 2");
+    return; //or got to display function || set display here for the HTML
+  } else if (isNaN(target) === false && num2 !== undefined) { //target is number and num2 is not undefined
+    console.log("adding onto num2");
+    num2 = num2 + target;
+    console.log(num2);
+    return; //or got to display function || set display here for the HTML
+  }
 }
 
-//console.log(isNaN("1"));
+
+
+
+//console.log(+"1" + +"2"); equation with strings for two numbers
+
+
 
 /* NOTES
 //have numbers properly being added on to the end of the number vars

@@ -18,17 +18,7 @@ document.onclick = function(event) {
   } 
 };
 
-/*target is passed in and then values are sorted
-function equation(target) {
-  //console.log(Number(target));
-  if (isNaN(target) === false){
-    console.log("A Number");
-  } else if (isNaN(target) === true){
-    console.log("is NaN");
-  }
-}
-*/
-
+//sort equation inputs
 function equation(target) {
   //console.log(Number(target));
   if (isNaN(target) === false && num1 === undefined){ //taget is a number and num1 is undefined
@@ -41,6 +31,15 @@ function equation(target) {
     num1 = num1 + target;
     console.log(num1);
     return; //or got to display function || set display here for the HTML
+  } else if (target === "." && num1 === undefined){//decimal added to num1
+    num1 = 0 + target;
+    console.log(num1 + " decimal before num1");
+    return; //or got to display function || set display here for the HTML
+  } else if (target === "." && num1.includes(".") === false && num1 !== undefined && operator === undefined){//decimal added to num1 and no decimal already in string
+    console.log("adding decimal on to num1 that has a value present");
+    num1 = num1 + target;
+    console.log(num1);
+    return; //or got to display function || set display here for the HTML 
   } else if (isNaN(target) === true && num1 !== undefined && operator === undefined){//target isNaN, num1 is not undefined, and operator is undefined
     console.log("is NaN");
     operator = target;
@@ -61,6 +60,12 @@ function equation(target) {
 
 
 
+
+
+
+
+
+//console.log(.1 + 1.);
 //console.log(+"1" + +"2"); equation with strings for two numbers
 
 

@@ -9,11 +9,11 @@ let operator = undefined;//operator to set either +, - , *, or / --SEE README EX
 
 //checks for clicks in the document that have the class of btn and then passes it to the equation function if the class is present
 document.onclick = function(event) {
- if(event.target.classList.contains('btn')){ // check for class="btn"
+ if(event.target.classList.contains('btn') && event.target.classList.contains('exception') !== true){ // check for class="btn"
     var target = event.target.innerHTML; 
     //console.log(target);
     equation(target);
-  } else { //ADD BASE CASE? or leave as is? 
+  } else { //leave as is? 
     //console.log("False");
   } 
 };
@@ -65,7 +65,6 @@ function equation(target) {
     return; //or got to display function || set display here for the HTML 
   }
 }
-
 
 
 

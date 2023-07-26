@@ -4,7 +4,7 @@ const output = document.querySelector('#output');//ID output is the HTML display
 //three vars to take in user inputs that will make up the equation 
 let num1 = undefined;//first number of the equation
 let num2 = undefined;//second number of the equation 
-let operator = undefined;//operator to set either +, - , *, or / --SEE README EXAMPLE
+let operator = undefined;//operator to set either +, - , *, or / 
 
 //checks for clicks in the document that have the class of btn and then passes it to the equation function if the class is present
 document.onclick = function(event) {
@@ -15,7 +15,12 @@ document.onclick = function(event) {
   } else if (event.target.id === "button-equal" && num2 !== undefined){ //if equals btn is pressed and num2 is not undefined
     //console.log(num1 + operator + num2);
     equals();
-  } 
+  } else if (event.target.id === "reset" && num1 !== undefined) {//reset button to clear all equation vars (num1, num2, operator)
+    num1 = undefined;
+    num2 = undefined;
+    operator = undefined;
+    output.innerHTML = 0;//sets HTML output to 0 after reset
+  }
 };
 
 //function to sort equation values
@@ -54,7 +59,7 @@ function equation(target) {
 function equals() {
   let equation = "";
   if (operator === " + ") {
-     equation = +num1 + +num2;
+      equation = +num1 + +num2;
   } else if (operator === " - ") {
       equation = +num1 - +num2;
   } else if (operator === " * ") {
@@ -62,12 +67,12 @@ function equals() {
   } else if (operator === " / ") {
       equation = +num1 / +num2;
   } 
-      //console.log(equation);
-      output.innerHTML = `${equation}`;//set equation sum to display in HTML
-      num1 = output.innerHTML;//display inner.html is set to num1
-      operator = undefined; //reset operator
-      num2 = undefined;// reset num2
-      //console.log(num1);
+    //console.log(equation);
+    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    num1 = output.innerHTML;//display inner.html is set to num1
+    operator = undefined; //reset operator
+    num2 = undefined;// reset num2
+    //console.log(num1);
 }
 
 

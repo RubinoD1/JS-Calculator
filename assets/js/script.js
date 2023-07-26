@@ -1,6 +1,5 @@
 //DOM 
-//ID output is the HTML display for the calculator 
-const output = document.querySelector('#output');
+const output = document.querySelector('#output');//ID output is the HTML display for the calculator 
 
 //three vars to take in user inputs that will make up the equation 
 let num1 = undefined;//first number of the equation
@@ -21,55 +20,39 @@ document.onclick = function(event) {
 
 //sort equation inputs
 function equation(target) {
-  //console.log(Number(target));
-  if (isNaN(target) === false && num1 === undefined){ //taget is a number and num1 is undefined
-    //console.log("A Number");
-    num1 = target;
-    console.log(num1);
-    return; //or got to display function || set display here for the HTML
+    if (isNaN(target) === false && num1 === undefined){ //taget is a number and num1 is undefined
+      num1 = target;
+      return output.innerHTML = `${num1}`;//output to HTML
   } else if (isNaN(target) === false && num1 !== undefined && operator === undefined){//target is a number, num1 isn't undefined and operator is undefined
-    console.log("adding onto num1");
-    num1 = num1 + target;
-    console.log(num1);
-    return; //or got to display function || set display here for the HTML
+      num1 = num1 + target;
+      return output.innerHTML = `${num1}`;//output to HTML
   } else if (target === "." && num1 === undefined){//decimal added to num1
-    num1 = 0 + target;
-    console.log(num1 + " decimal before num1");
-    return; //or got to display function || set display here for the HTML
+      num1 = 0 + target;
+      return output.innerHTML = `${num1}`;//output to HTML
   } else if (target === "." && num1.includes(".") === false && num1 !== undefined && operator === undefined){//decimal added to num1 if no decimal already in string and operator undefined
-    console.log("adding decimal on to num1 that has a value present");
-    num1 = num1 + target;
-    console.log(num1);
-    return; //or got to display function || set display here for the HTML 
+      num1 = num1 + target;
+      return output.innerHTML = `${num1}`;//output to HTML
   } else if (isNaN(target) === true && num1 !== undefined && operator === undefined && target !== "."){//target isNaN, num1 is not undefined, operator is undefined, and target is not a decimal
-    console.log("is NaN");
-    operator = target;
-    console.log(operator);
-    return; //or got to display function || set display here for the HTML
+      operator = target;
+      return output.innerHTML = `${num1}` + `${operator}`;//output to HTML
   } else if (isNaN(target) === false && operator !== undefined && num2 === undefined){ //target is a number, operator is not undefined, and num2 is undefined
-    num2 = target;
-    console.log(num2 + " is number 2");
-    return; //or got to display function || set display here for the HTML
+      num2 = target;
+      return output.innerHTML = `${num1}` + `${operator}` + `${num2}`;//output to HTML
   } else if (isNaN(target) === false && num2 !== undefined) { //target is number and num2 is not undefined
-    console.log("adding onto num2");
-    num2 = num2 + target;
-    console.log(num2);
-    return; //or got to display function || set display here for the HTML
+      num2 = num2 + target;
+      return output.innerHTML = `${num1}` + `${operator}` + `${num2}`;//output to HTML
   } else if (target === "." && operator !== undefined && num2 === undefined) {//target is decimal, operator is not undefined, and num2 is undefined
-    num2 = target;
-    console.log(num2 + " is decimal of number 2");
-    return; //or got to display function || set display here for the HTML
+      num2 = target;
+      return output.innerHTML = `${num1}` + `${operator}` + `${num2}`;//output to HTML
   } else if (target === "." && operator !== undefined  &&  num2 !== undefined && num2.includes(".") === false) {//target is decimal, operator is not undefined, num2 is not undefined, and num2 doesn't cointain a decimal
-    console.log("adding decimal on to num2 that has a value present");
-    num2 = num2 + target;
-    console.log(num2);
-    return; //or got to display function || set display here for the HTML 
+      num2 = num2 + target;
+      return output.innerHTML = `${num1}` + `${operator}` + `${num2}`;//output to HTML
   }
 }
 
 //function equal button -- only works if num2 has a value 
 function equals() {
-  if (operator === "+") {
+  if (operator === " + ") {
     let equation = +num1 + +num2;
     //console.log(equation);
     output.innerHTML = `${equation}`;//set equation sum to display in HTML
@@ -77,7 +60,7 @@ function equals() {
     operator = undefined; //reset operator
     num2 = undefined;// reset num2
     //console.log(num1);
-  } else if (operator === "-") {
+  } else if (operator === " - ") {
     let equation = +num1 - +num2;
     //console.log(equation);
     output.innerHTML = `${equation}`;//set equation sum to display in HTML
@@ -85,7 +68,7 @@ function equals() {
     operator = undefined; //reset operator
     num2 = undefined;// reset num2
     //console.log(num1);
-  } else if (operator === "*") {
+  } else if (operator === " * ") {
     let equation = +num1 * +num2;
     //console.log(equation);
     output.innerHTML = `${equation}`;//set equation sum to display in HTML
@@ -93,7 +76,7 @@ function equals() {
     operator = undefined; //reset operator
     num2 = undefined;// reset num2
     //console.log(num1);
-  } else if (operator === "/") {
+  } else if (operator === " / ") {
     let equation = +num1 / +num2;
     //console.log(equation);
     output.innerHTML = `${equation}`;//set equation sum to display in HTML

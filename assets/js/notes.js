@@ -86,3 +86,46 @@ equal.addEventListener('click', () => {
 }); 
 
 
+
+
+
+
+
+
+
+//function equal button -- only works if num2 has a value 
+function equals() {
+  if (operator === " + ") {
+    let equation = +num1 + +num2;
+    //console.log(equation);
+    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    num1 = output.innerHTML;//display inner.html is set to num1
+    operator = undefined; //reset operator
+    num2 = undefined;// reset num2
+    //console.log(num1);
+  } else if (operator === " - ") {
+    let equation = +num1 - +num2;
+    //console.log(equation);
+    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    num1 = output.innerHTML;//display inner.html is set to num1
+    operator = undefined; //reset operator
+    num2 = undefined;// reset num2
+    //console.log(num1);
+  } else if (operator === " * ") {
+    let equation = +num1 * +num2;
+    //console.log(equation);
+    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    num1 = output.innerHTML;//display inner.html is set to num1
+    operator = undefined; //reset operator
+    num2 = undefined;// reset num2
+    //console.log(num1);
+  } else if (operator === " / ") {
+    let equation = +num1 / +num2;
+    //console.log(equation);
+    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    num1 = output.innerHTML;//display inner.html is set to num1
+    operator = undefined; //reset operator
+    num2 = undefined;// reset num2
+    //console.log(num1);
+  } 
+}

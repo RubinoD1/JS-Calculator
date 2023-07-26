@@ -18,7 +18,7 @@ document.onclick = function(event) {
   } 
 };
 
-//sort equation inputs
+//function to sort equation values
 function equation(target) {
     if (isNaN(target) === false && num1 === undefined){ //taget is a number and num1 is undefined
       num1 = target;
@@ -52,65 +52,33 @@ function equation(target) {
 
 //function equal button -- only works if num2 has a value 
 function equals() {
+  let equation = "";
   if (operator === " + ") {
-    let equation = +num1 + +num2;
-    //console.log(equation);
-    output.innerHTML = `${equation}`;//set equation sum to display in HTML
-    num1 = output.innerHTML;//display inner.html is set to num1
-    operator = undefined; //reset operator
-    num2 = undefined;// reset num2
-    //console.log(num1);
+     equation = +num1 + +num2;
   } else if (operator === " - ") {
-    let equation = +num1 - +num2;
-    //console.log(equation);
-    output.innerHTML = `${equation}`;//set equation sum to display in HTML
-    num1 = output.innerHTML;//display inner.html is set to num1
-    operator = undefined; //reset operator
-    num2 = undefined;// reset num2
-    //console.log(num1);
+      equation = +num1 - +num2;
   } else if (operator === " * ") {
-    let equation = +num1 * +num2;
-    //console.log(equation);
-    output.innerHTML = `${equation}`;//set equation sum to display in HTML
-    num1 = output.innerHTML;//display inner.html is set to num1
-    operator = undefined; //reset operator
-    num2 = undefined;// reset num2
-    //console.log(num1);
+      equation = +num1 * +num2;
   } else if (operator === " / ") {
-    let equation = +num1 / +num2;
-    //console.log(equation);
-    output.innerHTML = `${equation}`;//set equation sum to display in HTML
-    num1 = output.innerHTML;//display inner.html is set to num1
-    operator = undefined; //reset operator
-    num2 = undefined;// reset num2
-    //console.log(num1);
+      equation = +num1 / +num2;
   } 
+      //console.log(equation);
+      output.innerHTML = `${equation}`;//set equation sum to display in HTML
+      num1 = output.innerHTML;//display inner.html is set to num1
+      operator = undefined; //reset operator
+      num2 = undefined;// reset num2
+      //console.log(num1);
 }
 
 
 
 
-
-
-
-
-//console.log(+"1" + +"2"); equation with strings for two numbers
-
-
-
 /* NOTES
-//have numbers properly being added on to the end of the number vars
-//equal triggers the equals function tot total up the three vars --cannot be used without values in all three vars
 //delete is pop to remove last 
 //reset clears all three vars 
 */
 
 /* TO-DO
-1) take in button press for all numbers and confirm in the console.log that it is being viewed as a number. 
-2) combine two numbers 
-3) successfully set operator 
-4) get total of three vars 
-5) display equation in proper format in HTML 
 6) del button working 
 7) reset button working
 8) work on HTML/CSS 

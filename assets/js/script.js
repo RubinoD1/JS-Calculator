@@ -1,6 +1,6 @@
 //DOM 
 //ID output is the HTML display for the calculator 
-
+const output = document.querySelector('#output');
 
 //three vars to take in user inputs that will make up the equation 
 let num1 = undefined;//first number of the equation
@@ -13,8 +13,9 @@ document.onclick = function(event) {
     var target = event.target.innerHTML; 
     //console.log(target);
     equation(target);
-  } else { //leave as is? 
-    //console.log("False");
+  } else if (event.target.id === "button-equal" && num2 !== undefined){ //if equals btn is pressed and num2 is not undefined
+    //console.log(num1 + operator + num2);
+    equals();
   } 
 };
 
@@ -66,6 +67,42 @@ function equation(target) {
   }
 }
 
+//function equal button -- only works if num2 has a value 
+function equals() {
+  if (operator === "+") {
+    let equation = +num1 + +num2;
+    //console.log(equation);
+    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    num1 = output.innerHTML;//display inner.html is set to num1
+    operator = undefined; //reset operator
+    num2 = undefined;// reset num2
+    //console.log(num1);
+  } else if (operator === "-") {
+    let equation = +num1 - +num2;
+    //console.log(equation);
+    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    num1 = output.innerHTML;//display inner.html is set to num1
+    operator = undefined; //reset operator
+    num2 = undefined;// reset num2
+    //console.log(num1);
+  } else if (operator === "*") {
+    let equation = +num1 * +num2;
+    //console.log(equation);
+    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    num1 = output.innerHTML;//display inner.html is set to num1
+    operator = undefined; //reset operator
+    num2 = undefined;// reset num2
+    //console.log(num1);
+  } else if (operator === "/") {
+    let equation = +num1 / +num2;
+    //console.log(equation);
+    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    num1 = output.innerHTML;//display inner.html is set to num1
+    operator = undefined; //reset operator
+    num2 = undefined;// reset num2
+    //console.log(num1);
+  } 
+}
 
 
 
@@ -73,7 +110,7 @@ function equation(target) {
 
 
 
-//console.log(.1 + 1.);
+
 //console.log(+"1" + +"2"); equation with strings for two numbers
 
 

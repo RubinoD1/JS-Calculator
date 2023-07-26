@@ -35,12 +35,12 @@ function equation(target) {
     num1 = 0 + target;
     console.log(num1 + " decimal before num1");
     return; //or got to display function || set display here for the HTML
-  } else if (target === "." && num1.includes(".") === false && num1 !== undefined && operator === undefined){//decimal added to num1 and no decimal already in string
+  } else if (target === "." && num1.includes(".") === false && num1 !== undefined && operator === undefined){//decimal added to num1 if no decimal already in string and operator undefined
     console.log("adding decimal on to num1 that has a value present");
     num1 = num1 + target;
     console.log(num1);
     return; //or got to display function || set display here for the HTML 
-  } else if (isNaN(target) === true && num1 !== undefined && operator === undefined){//target isNaN, num1 is not undefined, and operator is undefined
+  } else if (isNaN(target) === true && num1 !== undefined && operator === undefined && target !== "."){//target isNaN, num1 is not undefined, operator is undefined, and target is not a decimal
     console.log("is NaN");
     operator = target;
     console.log(operator);
@@ -54,6 +54,15 @@ function equation(target) {
     num2 = num2 + target;
     console.log(num2);
     return; //or got to display function || set display here for the HTML
+  } else if (target === "." && operator !== undefined && num2 === undefined) {//target is decimal, operator is not undefined, and num2 is undefined
+    num2 = target;
+    console.log(num2 + " is decimal of number 2");
+    return; //or got to display function || set display here for the HTML
+  } else if (target === "." && operator !== undefined  &&  num2 !== undefined && num2.includes(".") === false) {//target is decimal, operator is not undefined, num2 is not undefined, and num2 doesn't cointain a decimal
+    console.log("adding decimal on to num2 that has a value present");
+    num2 = num2 + target;
+    console.log(num2);
+    return; //or got to display function || set display here for the HTML 
   }
 }
 

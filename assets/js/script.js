@@ -20,6 +20,8 @@ document.onclick = function(event) {
     num2 = undefined;
     operator = undefined;
     output.innerHTML = 0;//sets HTML output to 0 after reset
+  } else if (event.target.id === "button-del" && num1 !== undefined) { 
+    deleteInput ();
   }
 };
 
@@ -75,17 +77,40 @@ function equals() {
     //console.log(num1);
 }
 
+//removes last input
+function deleteInput() {
+  if (num1 !== undefined && operator === undefined && num1.length === 1) {//if num1 has a value, operator is undefined, and num1 has a string length of 1
+    num1 = undefined
+    return output.innerHTML = 0; //equation empty, output 0 to HTML 
+  } else if (num1 !== undefined && operator === undefined && num1.length > 1) {//if num1 has a string.length greater than 1 and operator is undefined
+    num1 = num1.slice(0, -1);//using slice to reduce the string length by 1
+    return output.innerHTML = `${num1}`; // output to HTML 
+  } else if(num2 === undefined && operator !== undefined) {//operator not undefined and num2 is undefined
+    operator = undefined; 
+    return output.innerHTML = `${num1}`; // output to HTML
+  } else if (num2 !== undefined && num2.length === 1){//num2 is not undefined and has a string.length of 1 
+    num2 = undefined;
+    return output.innerHTML = `${num1}` + `${operator}`;//output to HTML
+  } else if (num2 !== undefined && num2.length > 1){//num2 is not undefined and string.length greater than 1
+    num2 = num2.slice(0, -1);//using slice to reduce the string length by 1
+    return output.innerHTML = `${num1}` + `${operator}` + `${num2}`;//output to HTML
+  }
+}
 
 
 
-/* NOTES
-//delete is pop to remove last 
-//reset clears all three vars 
-*/
+
+
 
 /* TO-DO
-6) del button working 
-7) reset button working
 8) work on HTML/CSS 
+- remove unneeded id's from HTML 
+- improve layout and check breakpoints
 9) README file 
+- markdown badges 
+- screenshots 
+- describe functionality 
+10) GitHub repo has about description and proper tags
+- MIT liscence
+11) clean up JS code comments and double check code is in a clean format
 */

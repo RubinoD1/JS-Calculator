@@ -10,10 +10,8 @@ let operator = undefined;//operator to set either +, - , *, or /
 document.onclick = function(event) {
  if(event.target.classList.contains('btn') && event.target.classList.contains('exception') !== true){ // check for class="btn"
     var target = event.target.innerHTML; 
-    //console.log(target);
     equation(target);
   } else if (event.target.id === "button-equal" && num2 !== undefined){ //if equals btn is pressed and num2 is not undefined
-    //console.log(num1 + operator + num2);
     equals();
   } else if (event.target.id === "reset" && num1 !== undefined) {//reset button to clear all equation vars (num1, num2, operator)
     num1 = undefined;
@@ -74,7 +72,6 @@ function equals() {
     num1 = output.innerHTML;//display inner.html is set to num1
     operator = undefined; //reset operator
     num2 = undefined;// reset num2
-    //console.log(num1);
 }
 
 //removes last input
@@ -113,4 +110,5 @@ function deleteInput() {
 10) GitHub repo has about description and proper tags
 - MIT liscence
 11) clean up JS code comments and double check code is in a clean format
+12) make sure notes.js is deleted 
 */

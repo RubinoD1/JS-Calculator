@@ -10,17 +10,26 @@ Live page:
 
 ## Introduction
 
+What is JavaScript Calculator? 
+
+Javascript Calculator is a calculator web app that uses the four basic mathematical operators: addition, subtraction, multiplication, and division. 
+
+Beyond basic arithmetic, there is a del button to delete the last enetered input and a reset button to
+clear all entered inputs.  
+
+## Technologies
+
+- HTML /CSS
+- JavaScript
+- Bootstrap
+
 ## Index
 
 ## Pseudocode 
 
 HTML 
-- Once JS is complete, add some selectable themes. 
-- favicon?
+- favicon
 
-work on HTML/CSS 
-- remove unneeded id's from HTML 
-- improve layout and check breakpoints
 README file 
 - markdown badges (MIT)
 - screenshots 

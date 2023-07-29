@@ -62,7 +62,7 @@ function equals() {
       equation = +num1 + +num2;
   } else if (operator === " - ") {
       equation = +num1 - +num2;
-  } else if (operator === " * ") {
+  } else if (operator === " x ") {
       equation = +num1 * +num2;
   } else if (operator === " / ") {
       equation = +num1 / +num2;

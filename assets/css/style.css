@@ -6,12 +6,10 @@ body {
   background-color: #faebd7;
   border: 1px solid #000000;
   text-align: center; 
-  
 }
 
 /* fixes width overflow for the rows*/
 .row {
-    margin-right: 0px;
-    margin-left: 0px;
+  margin: 0px;
 }
 

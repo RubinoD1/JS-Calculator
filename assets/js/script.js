@@ -6,7 +6,7 @@ let num1 = undefined;//first number of the equation
 let num2 = undefined;//second number of the equation 
 let operator = undefined;//operator to set either +, - , *, or / 
 
-//checks for clicks in the document that have the class of btn and then passes it to the equation function if the class is present
+//sorts user inputs 
 document.onclick = function(event) {
  if(event.target.classList.contains('btn') && event.target.classList.contains('exception') !== true){ // check for class="btn"
     var target = event.target.innerHTML; 
@@ -18,7 +18,7 @@ document.onclick = function(event) {
     num2 = undefined;
     operator = undefined;
     output.innerHTML = 0;//sets HTML output to 0 after reset
-  } else if (event.target.id === "button-del" && num1 !== undefined) { 
+  } else if (event.target.id === "button-del" && num1 !== undefined) { //calls delete function if num1 has a value
     deleteInput ();
   }
 };
@@ -67,8 +67,7 @@ function equals() {
   } else if (operator === " / ") {
       equation = +num1 / +num2;
   } 
-    //console.log(equation);
-    output.innerHTML = `${equation}`;//set equation sum to display in HTML
+    output.innerHTML = `${equation}`;//set equation result to display in HTML
     num1 = output.innerHTML;//display inner.html is set to num1
     operator = undefined; //reset operator
     num2 = undefined;// reset num2
@@ -97,18 +96,3 @@ function deleteInput() {
 
 
 
-
-
-/* TO-DO
-8) work on HTML/CSS 
-- remove unneeded id's from HTML 
-- improve layout and check breakpoints
-9) README file 
-- markdown badges 
-- screenshots 
-- describe functionality 
-10) GitHub repo has about description and proper tags
-- MIT liscence
-11) clean up JS code comments and double check code is in a clean format
-12) make sure notes.js is deleted 
-*/

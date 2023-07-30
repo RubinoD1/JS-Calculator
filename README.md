@@ -22,28 +22,25 @@ Beyond basic arithmetic, there is a delete button to remove the last entered inp
 
 ## Screenshots
 
-                           Homepage
+
 ![Homepage](/assets/images/screenshots/homepage.png)
                            
-                           Equation
 ![Equation](/assets/images/screenshots/equation.png)
 
-                           Phone 
 ![Phone](/assets/images/screenshots/phone.png)
 
 
 
 ## Pseudocode 
 
-HTML 
-- favicon
 
 README file 
+- live page url 
 
- 
+
 GitHub repo has about description and proper tags
 - MIT liscence file in repo?
-- clean up JS code comments and double check code is in a clean format
+
 
 
 

@@ -4,7 +4,7 @@
 
 Github repo: https://github.com/RubinoD1/JS-Calculator
 
-Live page: 
+Live page: https://rubinod1.github.io/JS-Calculator/
 
 ## Introduction
 
@@ -31,15 +31,9 @@ Beyond basic arithmetic, there is a delete button to remove the last entered inp
 
 
 
-## Pseudocode 
 
 
-README file 
-- live page url 
 
-
-GitHub repo has about description and proper tags
-- MIT liscence file in repo?
 
 
 
